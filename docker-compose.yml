@@ -1,0 +1,11 @@
+version: '3'
+services:
+ python:
+   container_name: python.local
+   build: ./python_local
+   image: python:11
+   tty: true
+   volumes:
+      - type: bind
+        source: ./python
+        target: /python
